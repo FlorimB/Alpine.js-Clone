@@ -1,0 +1,1 @@
+export default (el, value) => el.textContent = value;

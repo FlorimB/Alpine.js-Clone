@@ -1,0 +1,1 @@
+export default (el, value) => el.style.display = value ? "block" : "none";
