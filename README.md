@@ -12,17 +12,25 @@ A minimal JavaScript reactive framework inspired by Alpine.js, designed for simp
 - Lightweight and minimal footprint
 - Easily extendable
 
-## Installation
+## 📦 Getting Started
 
-Clone the repo or download the source files directly:
+1. **Clone the Repository**:
 
-```bash
-git clone https://github.com/FlorimB/Alpine.js-Clone.git
-```
-```bash
-npm install
-```
-Then include your scripts in your project.
+   ```bash
+   git clone https://github.com/FlorimB/Alpine.js-Clone.git
+   ```
+
+   ```bash
+   cd Alpine.js-Clone
+   ```
+
+   ```bash
+   npm install
+   ```
+
+2. **Open the Example**:
+
+   Open `index.html` in your browser to see the directives in action.
 
 ## Usage
 
@@ -38,15 +46,80 @@ Basic example in HTML:
 
 ## Directives
 
-- `x-text` — Updates element text content reactively.
-- `x-show` — Toggles element visibility.
-- `x-model` — Two-way binding for form elements.
-- `x-bind` — Bind attributes dynamically.
-- `x-on` / `@event` — Event listeners with inline handlers.
-- `x-html` — Render raw HTML content.
-- `x-if` — Conditionally render elements.
-- `x-for` — Loop rendering over arrays or objects.
-- `x-clipboard` — Copy text to clipboard on event (e.g., click).
+### `x-data`
+Initializes the reactive state for the component. All variables declared inside are tracked for changes.
+
+```html
+<div x-data="{ count: 0 }"></div>
+```
+
+### `x-text`
+Binds a text node to a reactive expression.
+
+```html
+<p x-text="message"></p>
+```
+
+### `x-html`
+Binds and renders raw HTML from a reactive expression.
+
+```html
+<div x-html="htmlContent"></div>
+```
+
+### `x-show`
+Toggles visibility using `display: none` based on the expression's truthiness.
+
+```html
+<div x-show="isVisible">Visible if true</div>
+```
+
+### `x-bind`
+Dynamically sets element attributes.
+
+```html
+<img x-bind:src="imageUrl">
+```
+
+### `x-on` / `@event`
+Attaches an event handler. You can also use shorthand `@event`.
+
+```html
+<button x-on:click="count++">Click</button>
+<!-- same as -->
+<button @click="count++">Click</button>
+```
+
+### `x-model`
+Creates a two-way binding between form inputs and the reactive data.
+
+```html
+<input x-model="name" type="text">
+<p x-text="name"></p>
+```
+
+### `x-if`
+Conditionally renders DOM nodes. Unlike `x-show`, this removes or adds the element to the DOM entirely.
+
+```html
+<div x-if="shouldShow">Rendered only if true</div>
+```
+
+### `x-for`
+Repeats an element for each item in an array or object.
+
+```html
+<ul x-for="item in items">
+  <li x-text="item"></li>
+</ul>
+```
+
+### `x-clipboard`
+Copies text to the clipboard on specified events (e.g., `click`).
+
+```html
+<button x-clipboard.click="textToCopy">Copy</button>
+```
 
 ## How it works
 
