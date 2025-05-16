@@ -1,12 +1,12 @@
-# Alpine.js Clone
+# Snowcap.js
 
 A minimal JavaScript reactive framework inspired by Alpine.js, designed for simplicity and ease of use.
 
 ## Features
 
 - Reactive data binding with Vue.js reactivity system (`@vue/reactivity`)
-- Directive based syntax similar to Alpine.js (`x-text`, `x-show`, `x-model`, `x-bind`, `x-on`, `x-html`, `x-if`, `x-for`)
-- Additional directives like (`x-clipboard`)
+- Directive based syntax similar to Alpine.js (`s-text`, `s-show`, `s-model`, `s-bind`, `s-on`, `s-html`, `s-if`, `s-for`)
+- Additional directives like (`s-clipboard`)
 - Supports custom directives and event handlers
 - DOM walking and dynamic binding
 - Lightweight and minimal footprint
@@ -17,11 +17,11 @@ A minimal JavaScript reactive framework inspired by Alpine.js, designed for simp
 1. **Clone the Repository**:
 
    ```bash
-   git clone https://github.com/FlorimB/Alpine.js-Clone.git
+   git clone https://github.com/FlorimB/Snowcap.js.git
    ```
 
    ```bash
-   cd Alpine.js-Clone
+   cd Snowcap.js
    ```
 
    ```bash
@@ -31,7 +31,7 @@ A minimal JavaScript reactive framework inspired by Alpine.js, designed for simp
    or
 
    ```bash
-   npm install alpinejs-clone
+   npm install snowcap
    ```
 
 3. **Open the Example**:
@@ -43,88 +43,88 @@ A minimal JavaScript reactive framework inspired by Alpine.js, designed for simp
 Basic example in HTML:
 
 ```html
-<div x-data="{ message: 'Hello, World!' }">
-  <input x-model="message" type="text" />
-  <p x-text="message"></p>
-  <button x-clipboard.click="message">Copy Message</button>
+<div s-data="{ message: 'Hello, World!' }">
+  <input s-model="message" type="text" />
+  <p s-text="message"></p>
+  <button s-clipboard.click="message">Copy Message</button>
 </div>
 ```
 
 ## Directives
 
-### `x-data`
+### `s-data`
 Initializes the reactive state for the component. All variables declared inside are tracked for changes.
 
 ```html
-<div x-data="{ count: 0 }"></div>
+<div s-data="{ count: 0 }"></div>
 ```
 
-### `x-text`
+### `s-text`
 Binds a text node to a reactive expression.
 
 ```html
-<p x-text="message"></p>
+<p s-text="message"></p>
 ```
 
-### `x-html`
+### `s-html`
 Binds and renders raw HTML from a reactive expression.
 
 ```html
-<div x-html="htmlContent"></div>
+<div s-html="htmlContent"></div>
 ```
 
-### `x-show`
+### `s-show`
 Toggles visibility using `display: none` based on the expression's truthiness.
 
 ```html
-<div x-show="isVisible">Visible if true</div>
+<div s-show="isVisible">Visible if true</div>
 ```
 
-### `x-bind`
+### `s-bind`
 Dynamically sets element attributes.
 
 ```html
-<img x-bind:src="imageUrl">
+<img s-bind:src="imageUrl">
 ```
 
-### `x-on` / `@event`
+### `s-on` / `@event`
 Attaches an event handler. You can also use shorthand `@event`.
 
 ```html
-<button x-on:click="count++">Click</button>
+<button s-on:click="count++">Click</button>
 <!-- same as -->
 <button @click="count++">Click</button>
 ```
 
-### `x-model`
+### `s-model`
 Creates a two-way binding between form inputs and the reactive data.
 
 ```html
-<input x-model="name" type="text">
-<p x-text="name"></p>
+<input s-model="name" type="text">
+<p s-text="name"></p>
 ```
 
-### `x-if`
-Conditionally renders DOM nodes. Unlike `x-show`, this removes or adds the element to the DOM entirely.
+### `s-if`
+Conditionally renders DOM nodes. Unlike `s-show`, this removes or adds the element to the DOM entirely.
 
 ```html
-<div x-if="shouldShow">Rendered only if true</div>
+<div s-if="shouldShow">Rendered only if true</div>
 ```
 
-### `x-for`
+### `s-for`
 Repeats an element for each item in an array or object.
 
 ```html
-<ul x-for="item in items">
-  <li x-text="item"></li>
+<ul s-for="item in items">
+  <li s-text="item"></li>
 </ul>
 ```
 
-### `x-clipboard`
+### `s-clipboard`
 Copies text to the clipboard on specified events (e.g., `click`).
 
 ```html
-<button x-clipboard.click="textToCopy">Copy</button>
+<button s-clipboard.click="textToCopy">Copy</button>
 ```
 
 ## How it works
