@@ -7,7 +7,7 @@ const Alpine = {
     _components: [],
 
     start() {
-        const roots = document.querySelectorAll("[x-data]");
+        const roots = document.querySelectorAll("[s-data]");
         roots.forEach(root => {
             const rawData = getInitialData(root);
             const data = reactive(rawData);

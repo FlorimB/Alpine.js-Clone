@@ -7,8 +7,15 @@
     <title>Alpine.js Clone</title>
   </head>
   <body>
-    <div x-data="{ text: 'Florim' }">
-      <button x-clipboard.click="text">Copy Text</button>
+    <div s-data="{ count: 0 }">
+      <button @click="count++">++</button>
+      <p s-text="count"></p>
+    </div>
+
+    <div s-data="{ names: ['A', 'B', 'C'] }">
+      <ul s-for="name in names">
+        <li s-text="name"></li>
+      </ul>
     </div>
 
     <script type="module" src="/src/main.js"></script>

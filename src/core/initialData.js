@@ -1,4 +1,4 @@
 export default root => {
-    let dataString = root.getAttribute("x-data");
+    let dataString = root.getAttribute("s-data");
     return eval(`(${dataString})`);
 };

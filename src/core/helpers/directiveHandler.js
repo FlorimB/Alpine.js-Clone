@@ -11,40 +11,40 @@ export default function (data, directives) {
       }
     },
     {
-      match: name => name.startsWith("x-on:"),
+      match: name => name.startsWith("s-on:"),
       handle: (el, name, value) => {
-        directives["x-on"](el, value, data, name);
+        directives["s-on"](el, value, data, name);
       }
     },
     {
-      match: name => name.startsWith("x-bind:"),
+      match: name => name.startsWith("s-bind:"),
       handle: (el, name, value) => {
-        directives["x-bind"](el, value, name, data);
+        directives["s-bind"](el, value, name, data);
       }
     },
     {
-      match: name => name.startsWith("x-clipboard."),
+      match: name => name.startsWith("s-clipboard."),
       handle: (el, name, value) => {
         const event = name.split(".")[1] || "click";
-        directives["x-clipboard"](el, event, value, data);
+        directives["s-clipboard"](el, event, value, data);
       }
     },
     {
-      match: name => name === "x-cloak",
+      match: name => name === "s-cloak",
       handle: el => {
-        el.removeAttribute("x-cloak");
+        el.removeAttribute("s-cloak");
       }
     },
     {
-      match: name => name === "x-for",
+      match: name => name === "s-for",
       handle: (el, _, value) => {
-        directives["x-for"](el, value, data);
+        directives["s-for"](el, value, data);
       }
     },
     {
-      match: name => name === "x-model",
+      match: name => name === "s-model",
       handle: (el, _, value) => {
-        directives["x-model"](el, value, data);
+        directives["s-model"](el, value, data);
       }
     },
     {
