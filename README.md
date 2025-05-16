@@ -19,7 +19,9 @@ Clone the repo or download the source files directly:
 ```bash
 git clone https://github.com/FlorimB/Alpine.js-Clone.git
 ```
-
+```bash
+npm install
+```
 Then include your scripts in your project.
 
 ## Usage
