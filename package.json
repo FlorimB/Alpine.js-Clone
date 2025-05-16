@@ -1,6 +1,6 @@
 {
-  "name": "alpine-clone",
-  "private": true,
+  "name": "snowcap",
+  "private": false,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
@@ -13,5 +13,6 @@
   },
   "dependencies": {
     "@vue/reactivity": "^3.5.13"
-  }
+  },
+  "homepage": "https://github.com/FlorimB/Snowcap.js/blob/main/README.md"
 }
