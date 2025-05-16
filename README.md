@@ -28,7 +28,13 @@ A minimal JavaScript reactive framework inspired by Alpine.js, designed for simp
    npm install
    ```
 
-2. **Open the Example**:
+   or
+
+   ```bash
+   npm install alpinejs-clone
+   ```
+
+3. **Open the Example**:
 
    Open `index.html` in your browser to see the directives in action.
 
