@@ -7,6 +7,7 @@ import sHtml from "../directives/s-html.js";
 import sIf from "../directives/s-if.js";
 import sFor from "../directives/s-for.js";
 import sClipboard from "../directives/s-clipboard.js";
+import sCollapse from "../directives/s-collapse.js";
 
 export default {
   "s-text": sText,
@@ -17,5 +18,6 @@ export default {
   "s-html": sHtml,
   "s-if": sIf,
   "s-for": sFor,
-  "s-clipboard": sClipboard
+  "s-clipboard": sClipboard,
+  "s-collapse": sCollapse
 };
