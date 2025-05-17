@@ -1,8 +1,16 @@
 {
   "name": "snowcap",
   "private": false,
-  "version": "0.0.0",
+  "version": "1.0.1",
   "type": "module",
+  "main": "dist/Snowcap.cjs.js",
+  "module": "dist/Snowcap.es.js",
+  "browser": "dist/Snowcap.iife.js",
+  "exports": {
+    "import": "./dist/Snowcap.es.js",
+    "require": "./dist/Snowcap.cjs.js",
+    "default": "./dist/Snowcap.iife.js"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -14,5 +22,5 @@
   "dependencies": {
     "@vue/reactivity": "^3.5.13"
   },
-  "homepage": "https://github.com/FlorimB/Snowcap.js/blob/main/README.md"
+  "homepage": "https://github.com/FlorimB/Snowcap.js"
 }
