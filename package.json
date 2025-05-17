@@ -24,5 +24,24 @@
     "vite": "^6.3.5",
     "@vue/reactivity": "^3.5.13"
   },
+  "keywords": [
+    "alpinejs",
+    "vue",
+    "reactivity",
+    "lightweight",
+    "framework",
+    "mini framework",
+    "dom reactivity",
+    "snowcap",
+    "vue reactivity",
+    "javascript framework",
+    "frontend",
+    "micro frontend",
+    "declarative",
+    "vue composition",
+    "alpine alternative",
+    "vue alternative",
+    "vanilla js reactivity"
+  ],
   "homepage": "https://github.com/FlorimB/Snowcap.js"
 }
