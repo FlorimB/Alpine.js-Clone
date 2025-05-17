@@ -1,7 +1,8 @@
 {
   "name": "snowcap",
+  "author": "Florim Bulica",
   "private": false,
-  "version": "1.0.1",
+  "version": "1.0.2",
   "type": "module",
   "main": "dist/Snowcap.cjs.js",
   "module": "dist/Snowcap.es.js",
@@ -16,10 +17,11 @@
     "build": "vite build",
     "preview": "vite preview"
   },
-  "devDependencies": {
-    "vite": "^6.3.5"
+  "peerDependencies": {
+    "@vue/reactivity": "^3.5.13"
   },
-  "dependencies": {
+  "devDependencies": {
+    "vite": "^6.3.5",
     "@vue/reactivity": "^3.5.13"
   },
   "homepage": "https://github.com/FlorimB/Snowcap.js"
