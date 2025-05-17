@@ -21,8 +21,8 @@
     "@vue/reactivity": "^3.5.13"
   },
   "devDependencies": {
-    "vite": "^6.3.5",
-    "@vue/reactivity": "^3.5.13"
+    "@vue/reactivity": "^3.5.13",
+    "vite": "^6.3.5"
   },
   "keywords": [
     "alpinejs",
