@@ -3,7 +3,7 @@ import getInitialData from "./core/initialData.js";
 import bindEffect from "./core/bindEffect";
 import directives from "./core/directives.js";
 
-const Alpine = {
+const Snowcap = {
     _components: [],
 
     start() {
@@ -21,6 +21,4 @@ const Alpine = {
     }
 };
 
-window.Alpine = Alpine;
-
-Alpine.start();
+export default Snowcap;
