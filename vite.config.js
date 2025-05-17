@@ -5,7 +5,7 @@ export default defineConfig({
     lib: {
       entry: 'src/main.js',
       name: 'Snowcap', // Global variable name in IIFE
-      fileName: () => 'index.js',
+      fileName: () => 'Snowcap.js',
       formats: ['iife']
     }
   }
