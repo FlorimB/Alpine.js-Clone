@@ -18,6 +18,10 @@
       </ul>
     </div>
 
-    <script type="module" src="/src/main.js"></script>
+    <script type="module">
+      import Snowcap from "./dist/index.js";
+      window.Snowcap = Snowcap;
+      Snowcap.start();
+    </script>
   </body>
 </html>
