@@ -4,9 +4,17 @@ export default defineConfig({
   build: {
     lib: {
       entry: 'src/main.js',
-      name: 'Snowcap', // Global variable name in IIFE
-      fileName: () => 'Snowcap.js',
-      formats: ['iife']
+      name: 'Snowcap',
+      fileName: (format) => `Snowcap.${format}.js`,
+      formats: ['es', 'cjs', 'iife'], 
+    },
+    rollupOptions: {
+      external: ['@vue/reactivity'],
+      output: {
+        globals: {
+          '@vue/reactivity': 'VueReactivity'
+        }
+      }
     }
   }
 });
