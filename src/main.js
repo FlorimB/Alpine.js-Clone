@@ -22,3 +22,7 @@ const Snowcap = {
 };
 
 export default Snowcap;
+
+window.Snowcap = Snowcap;
+
+Snowcap.start();

@@ -11,130 +11,62 @@ A minimal JavaScript reactive framework inspired by Alpine.js, designed for simp
 - DOM walking and dynamic binding
 - Lightweight and minimal footprint
 - Easily extendable
+- CDN support for quick prototyping
+- Event modifiers support (`.prevent`, `.stop`, etc.)
 
-## 📦 Getting Started
+## 📦 Installation
 
-1. **Clone the Repository**:
+### NPM
+```bash
+npm install snowcap
+```
 
-   ```bash
-   git clone https://github.com/FlorimB/Snowcap.js.git
-   ```
+### CDN
+```html
+<script src="https://unpkg.com/snowcap"></script>
+```
 
-   ```bash
-   cd Snowcap.js
-   ```
+## Quick Start
 
-   ```bash
-   npm install
-   ```
+1. Add Snowcap to your project (NPM or CDN)
+2. Initialize Snowcap:
 
-   or
+```javascript
+import Snowcap from "snowcap";
+window.Snowcap = Snowcap;
+Snowcap.start();
+```
 
-   ```bash
-   npm install snowcap
-   ```
-
-3. **Open the Example**:
-
-   Open `index.html` in your browser to see the directives in action.
-
-## Usage
-
-Basic example in HTML:
+3. Use directives in your HTML:
 
 ```html
-<div s-data="{ message: 'Hello, World!' }">
-  <input s-model="message" type="text" />
-  <p s-text="message"></p>
-  <button s-copy.click="message">Copy Message</button>
+<div s-data="{ count: 0 }">
+  <button @click="count++">Increment</button>
+  <p s-text="count"></p>
 </div>
 ```
 
-## Directives
+## Documentation
 
-### `s-data`
-Initializes the reactive state for the component. All variables declared inside are tracked for changes.
+For detailed documentation, examples, and best practices, please refer to [DOCUMENTATION.md](./DOCUMENTATION.md).
 
-```html
-<div s-data="{ count: 0 }"></div>
-```
+## Browser Support
 
-### `s-text`
-Binds a text node to a reactive expression.
-
-```html
-<p s-text="message"></p>
-```
-
-### `s-html`
-Binds and renders raw HTML from a reactive expression.
-
-```html
-<div s-html="htmlContent"></div>
-```
-
-### `s-show`
-Toggles visibility using `display: none` based on the expression's truthiness.
-
-```html
-<div s-show="isVisible">Visible if true</div>
-```
-
-### `s-bind`
-Dynamically sets element attributes.
-
-```html
-<img s-bind:src="imageUrl">
-```
-
-### `s-on` / `@event`
-Attaches an event handler. You can also use shorthand `@event`.
-
-```html
-<button s-on:click="count++">Click</button>
-<!-- same as -->
-<button @click="count++">Click</button>
-```
-
-### `s-model`
-Creates a two-way binding between form inputs and the reactive data.
-
-```html
-<input s-model="name" type="text">
-<p s-text="name"></p>
-```
-
-### `s-if`
-Conditionally renders DOM nodes. Unlike `s-show`, this removes or adds the element to the DOM entirely.
-
-```html
-<div s-if="shouldShow">Rendered only if true</div>
-```
-
-### `s-for`
-Repeats an element for each item in an array or object.
-
-```html
-<ul s-for="item in items">
-  <li s-text="item"></li>
-</ul>
-```
-
-### `s-copy`
-Copies text to the clipboard on specified events (e.g., `click`).
-
-```html
-<button s-copy.click="textToCopy">Copy</button>
-```
-
-## How it works
-
-- Uses Vue’s reactivity system for tracking data changes and re-rendering the DOM.
-- Parses custom directives on DOM elements and binds reactive handlers accordingly.
-- Supports dynamic evaluation of expressions within directive values using `new Function()` with a `with` statement for scoping.
-- Handles custom events, attribute bindings, and more.
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
 
 ## Contributing
 
-Contributions are welcome! Feel free to open issues or submit pull requests.
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+MIT License - feel free to use this project in any way you want.
+
+## Credits
+
+- Inspired by [Alpine.js](https://github.com/alpinejs/alpine)
+- Uses [Vue's Reactivity System](https://github.com/vuejs/core/tree/main/packages/reactivity)
 
