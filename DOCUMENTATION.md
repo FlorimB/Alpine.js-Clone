@@ -35,15 +35,6 @@ Snowcap.js uses Vue's reactivity system under the hood. All data declared within
 </div>
 ```
 
-### Scope Access
-You can access the current element using `$el` within your expressions:
-
-```html
-<div s-data>
-  <p s-text="$el.getAttribute('id')" id="myId"></p>
-</div>
-```
-
 ## Directives Reference
 
 ### `s-data`
