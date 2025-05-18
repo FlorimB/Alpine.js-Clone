@@ -15,11 +15,6 @@
 npm install snowcap
 ```
 
-### CDN
-```html
-<script src="https://unpkg.com/snowcap"></script>
-```
-
 ## Core Concepts
 
 ### Initialization
