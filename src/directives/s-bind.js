@@ -6,7 +6,7 @@ export default (el, value, attrName, data) => {
     return;
   }
 
-  const expr = new Function("data", `with (data) { return (${value}) }`);
-  const evaluate = expr(data);
+  const expr = new Function("data", "el", `with (data) { const $el = el; return (${value}) }`);
+  const evaluate = expr(data, el);
   el.setAttribute(prop, evaluate);
 };

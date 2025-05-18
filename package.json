@@ -2,7 +2,7 @@
   "name": "snowcap",
   "author": "Florim Bulica",
   "private": false,
-  "version": "1.0.6",
+  "version": "1.0.7",
   "type": "module",
   "main": "dist/Snowcap.cjs.js",
   "module": "dist/Snowcap.es.js",

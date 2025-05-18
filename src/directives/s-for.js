@@ -1,8 +1,8 @@
 export default (el, value, data) => {
     let [itemName, arrayName] = value.replaceAll(" ", "").split("in");
 
-    const getArray = new Function("data", `with (data) { return ${arrayName} }`);
-    const items = getArray(data);
+    const getArray = new Function("data", "el", `with (data) { const $el = el; return ${arrayName} }`);
+    const items = getArray(data, el);
 
     const template = el.firstElementChild;
     if (!template) return;

@@ -6,7 +6,7 @@ import sOn from "../directives/s-on.js";
 import sHtml from "../directives/s-html.js";
 import sIf from "../directives/s-if.js";
 import sFor from "../directives/s-for.js";
-import sClipboard from "../directives/s-clipboard.js";
+import sCopy from "../directives/s-copy.js";
 import sCollapse from "../directives/s-collapse.js";
 
 export default {
@@ -18,6 +18,6 @@ export default {
   "s-html": sHtml,
   "s-if": sIf,
   "s-for": sFor,
-  "s-clipboard": sClipboard,
+  "s-copy": sCopy,
   "s-collapse": sCollapse
 };

@@ -6,8 +6,8 @@ export default function (data, directives) {
       match: name => name.startsWith("@"),
       handle: (el, name, value) => {
         const event = name.slice(1);
-        const fn = new Function("event", "data", `with (data) { ${value} }`);
-        el.addEventListener(event, e => fn(e, data));
+        const fn = new Function("event", "data", "el", `with (data) { const $el = el; ${value} }`);
+        el.addEventListener(event, e => fn(e, data, el));
       }
     },
     {
@@ -23,10 +23,10 @@ export default function (data, directives) {
       }
     },
     {
-      match: name => name.startsWith("s-clipboard."),
+      match: name => name.startsWith("s-copy."),
       handle: (el, name, value) => {
-        const event = name.split(".")[1] || "click";
-        directives["s-clipboard"](el, event, value, data);
+        const event = name.split(".")[1];
+        directives["s-copy"](el, event, value, data);
       }
     },
     {
@@ -50,8 +50,8 @@ export default function (data, directives) {
     {
       match: name => directives[name],
       handle: (el, name, value) => {
-        const getValue = new Function("data", `with (data) { return (${value}) }`);
-        effect(() => directives[name](el, getValue(data)));
+        const getValue = new Function("data", "el", `with (data) { const $el = el; return (${value}) }`);
+        effect(() => directives[name](el, getValue(data, el)));
       }
     }
   ];
