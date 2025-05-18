@@ -48,7 +48,7 @@ Snowcap.start();
 
 ## Documentation
 
-For detailed documentation, examples, and best practices, please refer to [DOCUMENTATION.md](./DOCUMENTATION.md).
+For detailed documentation, examples, and best practices, please refer to [DOCUMENTATION.md](https://github.com/FlorimB/Snowcap.js/blob/main/DOCUMENTATION.md).
 
 ## Browser Support
 
