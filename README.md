@@ -6,7 +6,7 @@ A minimal JavaScript reactive framework inspired by Alpine.js, designed for simp
 
 - Reactive data binding with Vue.js reactivity system (`@vue/reactivity`)
 - Directive based syntax similar to Alpine.js (`s-text`, `s-show`, `s-model`, `s-bind`, `s-on`, `s-html`, `s-if`, `s-for`)
-- Additional directives like (`s-clipboard`)
+- Additional directives like (`s-copy`)
 - Supports custom directives and event handlers
 - DOM walking and dynamic binding
 - Lightweight and minimal footprint
@@ -46,7 +46,7 @@ Basic example in HTML:
 <div s-data="{ message: 'Hello, World!' }">
   <input s-model="message" type="text" />
   <p s-text="message"></p>
-  <button s-clipboard.click="message">Copy Message</button>
+  <button s-copy.click="message">Copy Message</button>
 </div>
 ```
 
@@ -120,11 +120,11 @@ Repeats an element for each item in an array or object.
 </ul>
 ```
 
-### `s-clipboard`
+### `s-copy`
 Copies text to the clipboard on specified events (e.g., `click`).
 
 ```html
-<button s-clipboard.click="textToCopy">Copy</button>
+<button s-copy.click="textToCopy">Copy</button>
 ```
 
 ## How it works
