@@ -18,18 +18,12 @@ npm install snowcap
 ## Core Concepts
 
 ### Initialization
-Snowcap.js needs to be initialized before use. You can do this in two ways:
+Snowcap.js needs to be initialized before use:
 
-1. Using ES modules:
 ```javascript
 import Snowcap from "snowcap";
 window.Snowcap = Snowcap;
 Snowcap.start();
-```
-
-2. Using CDN:
-```javascript
-window.Snowcap.start();
 ```
 
 ### Reactive State
